@@ -1,14 +1,14 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Headers } from '@angular/http';
 import { Injectable } from '@angular/core';
-import { Api } from 'api';
+import { Api } from './api';
 
 @Injectable()
 export class GithubApi extends Api {
     url: string = 'https://api.github.com';
 
-    constructor() {
-      super();
+    constructor(public http: HttpClient) {
+      super(http);
     }
 
     createHeaders() {
