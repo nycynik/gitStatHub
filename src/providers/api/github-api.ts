@@ -8,7 +8,7 @@ export class GithubApi extends Api {
     url: string = 'https://api.github.com';
 
     constructor() {
-      super.constructor();
+      super();
     }
 
     createHeaders() {
