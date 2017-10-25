@@ -17,7 +17,12 @@ export class GithubApi extends Api {
       return headers;
     }
 
+    getUserInfo(userName: string) {
+
+      return this.get(`users/${userName}`);
+    }
+
     getUserRepos(userName: string) {
-      return this.get('users/${userName}/repos');
+      return this.get(`users/${userName}/repos`);
     }
 }
